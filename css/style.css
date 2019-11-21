@@ -1,0 +1,9 @@
+.card{
+    float: left;
+    margin:3%!important;
+}
+body {
+background:url("https://img1.grunge.com/img/gallery/the-real-reason-airplanes-are-almost-always-painted-white/intro-1567189774.jpg");
+background-repeat:no-repeat;
+background-size:cover;
+}
