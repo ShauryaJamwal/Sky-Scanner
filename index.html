@@ -5,15 +5,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 <title>SkyScanner</title>
 </head>
 <body>
 <div>
-    <marquee><h1 style="font-size:50px;font-family:'fantasy'"><b>SKY SCANNER</b></h1></marquee>
+    <marquee scrollamount="20"><h1 style="font-size: 50px;font-family: 'Bubblegum Sans', cursive;" class="text-info"><b><u>SKY SCANNER</u></b></h1></marquee>
 </div>
 <div>
-    <div class="container">
+    <div class="container mt-5">
         <center><h2><span class="text-info"><b>Search For a Flight</b></span></h2></center>
         <input type="text" id="search" placeholder="Enter IATA code..." class="form-control">
     </div>
@@ -22,6 +23,11 @@
     <button class="btn btn-info btn-outline m-4 p-3 prop" id="button">
         Search
     </button>
+        </div>
+        <div>
+            <button class="btn btn-info prop btn-outline m-4 p-3" id="routesw">
+                <a href="final.html" target="_blank" style="text-decoration:none;color:white">Weather</a>
+            </button>
         </div>
         <div>
     <button class="btn btn-info prop btn-outline m-4 p-3" id="routes">
@@ -42,9 +48,6 @@
 
 <div class="col-sm-9 mx-0" id="ticket"></div>
     </div>
-</div>
-<div class="footer fixed-bottom">
-    <p><h3>Made By: <a href="https://github.com/ShauryaJamwal/ShauryaJamwal.github.io" target="_blank" style="text-decoration:none;color:black">Shaurya Jamwal</a> </h3></p>
 </div>
 <!--<div id="placet"></div>
 <div id="cheapticket"></div>-->

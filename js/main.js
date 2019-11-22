@@ -174,6 +174,70 @@ else{
 	}
 });
 
+
+});
+
+
+$('#dbtn').on('click',function(e){
+    $('#daru').on('click',function(e){
+        document.getElementById('dticket').innerHTML='';
+    })
+  let name = document.getElementById('daru').value;
+  console.log(name);
+
+var settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": `https://the-cocktail-db.p.rapidapi.com/search.php?i=Vodka`,
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "the-cocktail-db.p.rapidapi.com",
+		"x-rapidapi-key": "d9c251a8bamshb7073813a2e193bp1765d9jsnec64921776a9"
+	}
+}
+
+$.ajax(settings).done(function (response) {
+	console.log(response.data);
+	let array=[];
+
+    for (var key in response.data) {
+        // skip loop if the property is from prototype
+//        if (!validation_messages.hasOwnProperty(key)) continue;
+
+        var obj = response.data[key];
+//        console.log(obj);
+         array.push({name:key,data:obj});
+
+    }
+//    console.log('This is array')
+//	console.log(array);
+
+if(array.length == 0){
+    document.getElementById('dplace').innerHTML='<h1 class="my-3 py-3">NO DATA FOUND</h1>';
+}
+else{
+	let component=array.map(fp=>{
+	    return(`
+	        <div class="card prop" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Name ${fp.data.strABV}</h5>
+                <h5 class="card-title">Airline ${fp.data.idIngredient}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Origin ${fp.data.strIngredient}</h6>
+                <p class="card-text">FLight Number${fp.data.strDescription}</p>
+                 <p class="card-text">Price ${fp.data.strType} INR</p>
+                  <p class="card-text">Destination ${fp.data.strABV}</p>
+
+              </div>
+            </div>`
+            )
+	});
+
+
+	document.getElementById('dplace').innerHTML=component;
+	document.getElementById('dticket').innerHTML=component;
+	}
+});
+
 });
 
 });
