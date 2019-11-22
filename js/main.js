@@ -40,7 +40,7 @@ if(array.length == 0){
 else{
 	let component=array.map(fp=>{
 	    return(`
-	        <div class="card" style="width: 18rem;">
+	        <div class="card prop" style="width: 18rem;">
               <div class="card-body">
                 <h5 class="card-title">Name ${fp.name}</h5>
                 <h5 class="card-title">Airline ${fp.data.airline}</h5>
@@ -49,8 +49,6 @@ else{
                  <p class="card-text">Price ${fp.data.price} INR</p>
                   <p class="card-text">Destination ${fp.data.destination}</p>
 
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
               </div>
             </div>`
             )

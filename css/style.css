@@ -7,3 +7,9 @@ background:url("https://img1.grunge.com/img/gallery/the-real-reason-airplanes-ar
 background-repeat:no-repeat;
 background-size:cover;
 }
+
+.prop:hover {
+    transform: scale(1.2);
+    box-shadow: 2px 2px 2px 3px white;
+
+}
